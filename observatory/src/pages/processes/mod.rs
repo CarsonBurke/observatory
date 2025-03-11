@@ -280,8 +280,8 @@ impl Page for ProcessPage {
                         ))
                         .push(
                             widget::container(widget::text::body(format!(
-                                "{}%",
-                                (process.0.usage_stats.cpu_usage / self.core_count).round()
+                                "{:.1}%",
+                                process.0.usage_stats.cpu_usage / self.core_count
                             )))
                             .width(Category::Cpu.width()),
                         )
